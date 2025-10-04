@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>豊田少年少女発明クラブ統合ポータルサイト - システム設定</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#F4C753", secondary: {light: "#FFF3E0", DEFAULT: "#FFB74D", dark: "#FB8C00"}, accent: {light: "#E8F5E9", DEFAULT: "#81C784", dark: "#43A047"}, background: {light: "#f9f9f9", dark: "#121212"}, surface: {light: "#ffffff", dark: "#1e1e1e"}, text: {light: {primary: "#212121", secondary: "#757575"}, dark: {primary: "#ffffff", secondary: "#bdbdbd"}}, "background-light": "#f8f7f6", "background-dark": "#221d10"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light-primary dark:text-text-dark-primary">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-surface-light dark:bg-surface-dark flex flex-col shrink-0 border-r border-gray-200 dark:border-gray-700">
+<div class="p-6 flex flex-col gap-2 border-b border-gray-200 dark:border-gray-700">
+<h1 class="text-lg font-bold">発明クラブ管理</h1>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">管理者</p>
+</div>
+<nav class="flex-1 p-4">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-light dark:hover:bg-primary-dark/20 hover:text-primary-dark dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span>ダッシュボード</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-light dark:hover:bg-primary-dark/20 hover:text-primary-dark dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span>ユーザー管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-light dark:hover:bg-primary-dark/20 hover:text-primary-dark dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span>コンテンツ管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary-light dark:bg-primary-dark/20 text-primary-dark dark:text-primary-light font-semibold" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>システム設定</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-light dark:hover:bg-primary-dark/20 hover:text-primary-dark dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">analytics</span>
+<span>統計情報</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-gray-200 dark:border-gray-700">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-light dark:hover:bg-primary-dark/20 hover:text-primary-dark dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>ログアウト</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 bg-background-light dark:bg-background-dark">
+<header class="mb-8">
+<h1 class="text-4xl font-bold">システム設定</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary mt-2">サイト全体のグローバル設定を管理します。</p>
+</header>
+<div class="space-y-12">
+<section>
+<h2 class="text-2xl font-semibold border-b border-gray-200 dark:border-gray-700 pb-2 mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-dark dark:text-primary-light">tune</span>
+                    基本設定
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-2" for="maintenance-mode">メンテナンスモード</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-light dark:peer-focus:ring-primary-dark rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-3 text-sm font-medium">有効にする</span>
+</label>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-2" for="emergency-alert">緊急速報通知（会場）</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-light dark:peer-focus:ring-primary-dark rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-3 text-sm font-medium">有効にする</span>
+</label>
+</div>
+</div>
+<div class="bg-primary-light/50 dark:bg-primary-dark/10 p-6 rounded-xl">
+<h3 class="font-semibold mb-2">基本設定について</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">
+                           ここではサイトの基本的な動作を制御します。メンテナンスモードを有効にすると、管理者以外のユーザーはサイトにアクセスできなくなります。緊急速報通知は、指定された会場で活動中に、重大な災害情報が発令された場合にのみ送信されます。
+                        </p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-semibold border-b border-gray-200 dark:border-gray-700 pb-2 mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-dark dark:text-secondary-light">notifications_active</span>
+                    通知設定
+                </h2>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<p>地震通知</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-light dark:peer-focus:ring-secondary-dark rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<p>防災通知（気象関連）</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-light dark:peer-focus:ring-secondary-dark rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<p>プッシュ通知</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-light dark:peer-focus:ring-secondary-dark rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-semibold border-b border-gray-200 dark:border-gray-700 pb-2 mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-dark dark:text-accent-light">campaign</span>
+                        通知テスト
+                    </h2>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700 space-y-4">
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">緊急速報が正しく送信されるかテストします。テスト通知は、管理者アカウントにのみ送信されます。</p>
+<button class="w-full bg-accent hover:bg-accent-dark text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">send</span>
+                            緊急速報テストを送信
+                        </button>
+</div>
+</section>
+<div class="flex justify-end pt-8 mt-12 border-t border-gray-200 dark:border-gray-700">
+<button class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+<span class="material-symbols-outlined">save</span>
+                    設定を保存
+                </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>統計情報 - 豊田少年少女発明クラブ統合ポータルサイト</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: "#F4C753",
+              light: "#FEF8E6"
+            },
+            secondary: "#63C7B2",
+            accent: "#E57373",
+            "background-light": "#F9F9F9",
+            "background-dark": "#1F2937",
+            "text-light": "#111827",
+            "text-dark": "#F3F4F6",
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "0.75rem",
+            xl: "1rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white dark:bg-gray-800 flex flex-col shrink-0 border-r border-gray-200 dark:border-gray-700">
+<div class="p-6 flex flex-col gap-2 border-b border-gray-200 dark:border-gray-700">
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">発明クラブ管理</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">管理者</p>
+</div>
+<nav class="flex-1 p-4">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span>ダッシュボード</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span>ユーザー管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span>コンテンツ管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>システム設定</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary-light text-primary font-semibold" href="#">
+<span class="material-symbols-outlined text-xl">analytics</span>
+<span>統計情報</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-gray-200 dark:border-gray-700">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>ログアウト</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 bg-background-light dark:bg-background-dark">
+<header class="mb-8 flex justify-between items-center">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">統計情報</h1>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">日次</button>
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-primary text-white border border-primary">週次</button>
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">月次</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-secondary text-white hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span>エクスポート</span>
+</button>
+</div>
+</header>
+<div class="space-y-8">
+<section class="flex flex-col gap-8">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 w-full">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">出席率ランキング</h3>
+<div class="flex items-center gap-4">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400" for="grade-filter">学年フィルター:</label>
+<select class="rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-primary focus:ring-primary text-sm" id="grade-filter">
+<option value="all">全学年</option>
+<option value="4">小学4年生</option>
+<option value="5">小学5年生</option>
+<option value="6">小学6年生</option>
+<option value="7">中学1年生</option>
+<option value="8">中学2年生</option>
+<option value="9">中学3年生</option>
+</select>
+</div>
+</div>
+<div class="max-h-96 overflow-y-auto">
+<table class="w-full text-left">
+<thead class="sticky top-0 bg-white dark:bg-gray-800">
+<tr>
+<th class="p-3 text-sm font-semibold text-gray-500 dark:text-gray-400">順位</th>
+<th class="p-3 text-sm font-semibold text-gray-500 dark:text-gray-400">氏名</th>
+<th class="p-3 text-sm font-semibold text-gray-500 dark:text-gray-400">学年</th>
+<th class="p-3 text-sm font-semibold text-gray-500 dark:text-gray-400">出席率</th>
+<th class="p-3 text-sm font-semibold text-gray-500 dark:text-gray-400">出席状況</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">1</td>
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">鈴木 花子</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">小5</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">
+<div class="flex items-center"><div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mr-2"><div class="bg-secondary h-2.5 rounded-full" style="width: 100%"></div></div><span class="text-sm font-medium">100%</span></div>
+</td>
+<td class="p-3 text-sm text-gray-600 dark:text-gray-400">12回中12回</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">2</td>
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">田中 太郎</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">中1</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">
+<div class="flex items-center"><div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mr-2"><div class="bg-secondary h-2.5 rounded-full" style="width: 98%"></div></div><span class="text-sm font-medium">98%</span></div>
+</td>
+<td class="p-3 text-sm text-gray-600 dark:text-gray-400">12回中11回</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">3</td>
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">佐藤 大輝</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">小6</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">
+<div class="flex items-center"><div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mr-2"><div class="bg-secondary h-2.5 rounded-full" style="width: 95%"></div></div><span class="text-sm font-medium">95%</span></div>
+</td>
+<td class="p-3 text-sm text-gray-600 dark:text-gray-400">12回中11回</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">4</td>
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">高橋 美咲</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">小5</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">
+<div class="flex items-center"><div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mr-2"><div class="bg-primary h-2.5 rounded-full" style="width: 92%"></div></div><span class="text-sm font-medium">92%</span></div>
+</td>
+<td class="p-3 text-sm text-gray-600 dark:text-gray-400">12回中11回</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">5</td>
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">伊藤 健太</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">中2</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">
+<div class="flex items-center"><div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mr-2"><div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div></div><span class="text-sm font-medium">90%</span></div>
+</td>
+<td class="p-3 text-sm text-gray-600 dark:text-gray-400">12回中10回</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">...</td>
+<td class="p-3 font-medium text-gray-800 dark:text-gray-200">...</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">...</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">...</td>
+<td class="p-3 text-gray-600 dark:text-gray-400">...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 w-full">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">学年別 出席割合</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">全クラス合計: 110人中95人が出席</p>
+</div>
+<div class="h-96"><canvas id="gradeAttendanceChart"></canvas></div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<script>
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    const textColor = isDarkMode ? '#F3F4F6' : '#111827';
+    const gridColor = isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
+    const gradeAttendanceCtx = document.getElementById('gradeAttendanceChart').getContext('2d');
+    new Chart(gradeAttendanceCtx, {
+      type: 'bar',
+      data: {
+        labels: ['小4', '小5', '小6', '中1', '中2', '中3'],
+        datasets: [{
+          label: '出席者',
+          data: [18, 22, 20, 15, 12, 8],
+          backgroundColor: '#A5D6A7', // pastel green
+          borderRadius: 4,
+          stack: 'Stack 0',
+        }, {
+          label: '欠席者',
+          data: [2, 1, 3, 2, 1, 2],
+          backgroundColor: '#FFCCBC', // pastel red
+          borderRadius: 4,
+          stack: 'Stack 0',
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            stacked: true,
+            grid: { display: false },
+            ticks: { color: textColor }
+          },
+          y: {
+            stacked: true,
+            beginAtZero: true,
+            grid: { color: gridColor },
+            ticks: { color: textColor },
+            title: {
+              display: true,
+              text: '生徒数',
+              color: textColor
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { color: textColor }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let label = context.dataset.label || '';
+                if (label) {
+                  label += ': ';
+                }
+                if (context.parsed.y !== null) {
+                  label += context.parsed.y + '人';
+                }
+                return label;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body></html>

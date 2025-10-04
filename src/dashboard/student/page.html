@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#F4C753", "background-light": "#f8f7f6", "background-dark": "#221d10"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>豊田少年少女発明クラブポータル</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-6 md:px-10 py-4">
+<div class="flex items-center gap-3 text-gray-800 dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.78 4.21 10.21L9 15V17C9 18.1 9.9 19 11 19V19.93ZM17.9 17.39L15 13V11C15 9.9 14.1 9 13 9H7.5C7.22 9 7 8.78 7 8.5C7 8.22 7.22 8 7.5 8H13C14.66 8 16 9.34 16 11V13.68L18.79 17.21C18.5 17.27 18.2 17.32 17.9 17.39ZM13 4.07C16.95 4.56 20 7.92 20 12C20 12.62 19.92 13.22 19.79 13.79L15 9V7C15 5.9 14.1 5 13 5V4.07Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-gray-800 dark:text-white text-xl font-bold tracking-tight">発明クラブポータル</h2>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium" href="#">ダッシュボード</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium" href="#">カレンダー</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium" href="#">イベント</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium" href="#">教材</a>
+</nav>
+<button class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="hidden lg:inline">チャット</span>
+</button>
+<button class="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-red-200/70 dark:hover:bg-red-900/50 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span>ログアウト</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnulx3HqaqJ07FNUd5lzRJO_B4oIhskwmnJeVeo6XQShQsv8DXXxyIGIuKLl_CnZr_5zE2pV_ppkDkaCCwaItz8Zks0NXTKYAVzZf_RvSqKa2gjzGezXDamnryXdGWaO9ql77AWehDVChhWSneXMz6r9VL7zT-QmR4RotYP927vYJfKVGZYcDQDaq-20BJViOcoTw7GdJqKjOA2B80JDsSzf8TjsbhSZuvfS5-1_FuWG3mgT9KcsepSVdngDJA66pm1OCZswJpv9SO");'></div>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-7xl mx-auto flex flex-col gap-8">
+<div class="flex flex-wrap justify-between items-center gap-4">
+<div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">マイダッシュボード</h1>
+<p class="text-gray-500 dark:text-gray-400 mt-1">おかえりなさい、エミリーさん！活動状況の概要です。</p>
+</div>
+</div>
+<section>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">概要</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-background-dark/50 rounded-lg p-6 border border-primary/20 dark:border-primary/30">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">進行中のプロジェクト</p>
+<p class="text-4xl font-bold text-gray-900 dark:text-white mt-1">2</p>
+<p class="text-sm text-green-500 mt-2">今月+1</p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 rounded-lg p-6 border border-primary/20 dark:border-primary/30">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">出席率</p>
+<p class="text-4xl font-bold text-gray-900 dark:text-white mt-1">95%</p>
+<p class="text-sm text-green-500 mt-2">先月比+5%</p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 rounded-lg p-6 border border-primary/20 dark:border-primary/30">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">新しいお知らせ</p>
+<p class="text-4xl font-bold text-gray-900 dark:text-white mt-1">3</p>
+<p class="text-sm text-green-500 mt-2">今週+2</p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<section>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">教材</h2>
+<div class="space-y-4">
+<div class="bg-white dark:bg-background-dark/50 p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<h3 class="font-bold text-gray-900 dark:text-white">ロボットアームプロジェクト</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">実施日: 2024年7月15日</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">備考: 複雑なタスクを実行できるロボットアームの構築。</p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<h3 class="font-bold text-gray-900 dark:text-white">スマートホームオートメーション</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">実施日: 2024年8月5日</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">備考: 音声コマンドで家電を自動化するシステムの開発。</p>
+</div>
+</div>
+<div class="mt-4 flex justify-center">
+<button class="bg-primary/10 dark:bg-primary/20 text-primary font-semibold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">add</span>
+<span>もっと見る</span>
+</button>
+</div>
+</section>
+<section class="mt-8">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">出席状況</h2>
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="flex justify-between items-center mb-2">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">出席率</p>
+<p class="text-sm font-bold text-gray-900 dark:text-white">95%</p>
+</div>
+<div class="w-full bg-primary/20 rounded-full h-2.5 dark:bg-primary/30">
+<div class="bg-primary h-2.5 rounded-full" style="width: 95%;"></div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-2">20セッション中19回出席しました。</p>
+</div>
+</section>
+</div>
+<div class="lg:col-span-1">
+<section>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">お知らせ</h2>
+<div class="bg-white dark:bg-background-dark/50 p-4 rounded-lg space-y-4 border border-primary/20 dark:border-primary/30">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 dark:bg-primary/20 text-primary p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">3Dプリンティングのワークショップ開催</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">2024年7月20日</p>
+</div>
+</div>
+<div class="border-t border-primary/10 dark:border-primary/20"></div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 dark:bg-primary/20 text-primary p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">新しいプロジェクトのアイデア募集中</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">2024年7月15日</p>
+</div>
+</div>
+<div class="border-t border-primary/10 dark:border-primary/20"></div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 dark:bg-primary/20 text-primary p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white">クラブ会議の日程変更</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">2024年7月10日</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-8">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">カレンダー</h2>
+<div class="bg-white dark:bg-background-dark/50 p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-background-dark">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-300">chevron_left</span>
+</button>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">2024年 7月</h3>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-background-dark">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-300">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm text-gray-500 dark:text-gray-400">
+<div class="font-semibold">日</div>
+<div class="font-semibold">月</div>
+<div class="font-semibold">火</div>
+<div class="font-semibold">水</div>
+<div class="font-semibold">木</div>
+<div class="font-semibold">金</div>
+<div class="font-semibold">土</div>
+<div class="text-gray-400 dark:text-gray-500">30</div>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div class="relative">10<span class="absolute bottom-1 left-1/2 -translate-x-1/2 h-1 w-1 bg-red-400 rounded-full"></span>
+</div>
+<div>11</div>
+<div>12</div>
+<div>13</div>
+<div>14</div>
+<div class="relative">15<span class="absolute bottom-1 left-1/2 -translate-x-1/2 h-1 w-1 bg-blue-400 rounded-full"></span>
+</div>
+<div>16</div>
+<div>17</div>
+<div>18</div>
+<div>19</div>
+<div class="relative"><span class="bg-primary/20 dark:bg-primary/30 text-primary font-bold rounded-full w-8 h-8 flex items-center justify-center">20</span><span class="absolute bottom-1 left-1/2 -translate-x-1/2 h-1 w-1 bg-green-400 rounded-full"></span>
+</div>
+<div>21</div>
+<div>22</div>
+<div>23</div>
+<div>24</div>
+<div>25</div>
+<div>26</div>
+<div>27</div>
+<div>28</div>
+<div>29</div>
+<div>30</div>
+<div>31</div>
+<div class="text-gray-400 dark:text-gray-500">1</div>
+<div class="text-gray-400 dark:text-gray-500">2</div>
+<div class="text-gray-400 dark:text-gray-500">3</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>豊田少年少女発明クラブ統合ポータルサイト - コンテンツ管理</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#F4C753", "background-light": "#f8f7f6", "background-dark": "#221d10"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white/50 dark:bg-black/20 flex flex-col shrink-0 border-r border-black/10 dark:border-white/10">
+<div class="p-6 flex flex-col gap-2 border-b border-black/10 dark:border-white/10">
+<h1 class="text-lg font-bold text-black/90 dark:text-white/90">発明クラブ管理</h1>
+<p class="text-sm text-black/60 dark:text-white/60">管理者</p>
+</div>
+<nav class="flex-1 p-4">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span>ダッシュボード</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span>ユーザー管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span>コンテンツ管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>システム設定</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">analytics</span>
+<span>統計情報</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-black/10 dark:border-white/10">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>ログアウト</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8 flex justify-between items-center">
+<h1 class="text-4xl font-bold text-black/90 dark:text-white/90">コンテンツ管理</h1>
+<button class="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+<span class="material-symbols-outlined">add</span>
+<span>新規コンテンツ作成</span>
+</button>
+</header>
+<div class="space-y-10">
+<div class="flex items-center gap-4">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-black/50 dark:text-white/50">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-white/50 dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary" placeholder="コンテンツを検索..." type="text"/>
+</div>
+<div class="relative">
+<select class="appearance-none w-full pl-4 pr-10 py-3 bg-white/50 dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary">
+<option>すべての種類</option>
+<option>お知らせ</option>
+<option>イベント情報</option>
+<option>教材</option>
+<option>FAQ</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-black/50 dark:text-white/50 pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none w-full pl-4 pr-10 py-3 bg-white/50 dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary">
+<option>すべてのステータス</option>
+<option>公開</option>
+<option>非公開</option>
+<option>下書き</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-black/50 dark:text-white/50 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-black/20 rounded-xl border border-black/10 dark:border-white/10 overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-black/5 dark:bg-white/5 border-b border-black/10 dark:border-white/10">
+<tr>
+<th class="p-4 font-semibold text-black/80 dark:text-white/80">タイトル</th>
+<th class="p-4 font-semibold text-black/80 dark:text-white/80">種類</th>
+<th class="p-4 font-semibold text-black/80 dark:text-white/80">ステータス</th>
+<th class="p-4 font-semibold text-black/80 dark:text-white/80">最終更新日</th>
+<th class="p-4 font-semibold text-black/80 dark:text-white/80">アクション</th>
+</tr>
+</thead>
+<tbody class="text-black/70 dark:text-white/70">
+<tr class="border-b border-black/10 dark:border-white/10">
+<td class="p-4">夏休み発明教室のお知らせ</td>
+<td class="p-4">お知らせ</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-green-200 text-green-800 text-sm font-medium">公開</span></td>
+<td class="p-4">2023-08-15</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">visibility_off</span></button>
+<button class="p-2 rounded-lg hover:bg-red-500/20 hover:text-red-500 transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-black/10 dark:border-white/10">
+<td class="p-4">プログラミング講座の開催</td>
+<td class="p-4">イベント情報</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-green-200 text-green-800 text-sm font-medium">公開</span></td>
+<td class="p-4">2023-08-10</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">visibility_off</span></button>
+<button class="p-2 rounded-lg hover:bg-red-500/20 hover:text-red-500 transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-black/10 dark:border-white/10">
+<td class="p-4">電子工作キットの使い方</td>
+<td class="p-4">教材</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-blue-200 text-blue-800 text-sm font-medium">非公開</span></td>
+<td class="p-4">2023-08-05</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">visibility</span></button>
+<button class="p-2 rounded-lg hover:bg-red-500/20 hover:text-red-500 transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="p-4">よくある質問：入会について</td>
+<td class="p-4">FAQ</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-gray-200 text-gray-800 text-sm font-medium">下書き</span></td>
+<td class="p-4">2023-07-28</td>
+<td class="p-4">
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary transition-colors"><span class="material-symbols-outlined">visibility</span></button>
+<button class="p-2 rounded-lg hover:bg-red-500/20 hover:text-red-500 transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex justify-between items-center text-sm text-black/60 dark:text-white/60">
+<p>全12件中 1〜4件を表示</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed" disabled=""><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 rounded-lg hover:bg-primary/20 hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

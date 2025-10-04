@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html class="" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>豊田少年少女発明クラブ統合ポータルサイト - ログイン</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#F4C753", "background-light": "#f8f7f6", "background-dark": "#221d10"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .form-input::placeholder {
+            color: #a0aec0;
+            opacity: 1;
+        }
+        .dark .form-input::placeholder {
+            color: #718096;
+        }
+        .form-input:focus {
+           --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+           --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+           box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+           --tw-ring-color: var(--theme-primary, #4799eb);}
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col items-center justify-center min-h-screen p-4">
+<div class="w-full max-w-sm">
+<div class="text-center mb-8">
+<div class="inline-block p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+<svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+<path d="M2 17l10 5 10-5"></path>
+<path d="M2 12l10 5 10-5"></path>
+</svg>
+</div>
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white mt-4">豊田少年少女発明クラブ</h1>
+<p class="text-gray-600 dark:text-gray-400">ポータルサイトへようこそ</p>
+</div>
+<div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm p-8">
+<h2 class="text-xl font-semibold text-gray-900 dark:text-white text-center mb-6">ログイン</h2>
+<form class="space-y-5">
+<div>
+<label class="sr-only" for="username">ユーザー名</label>
+<input class="form-input w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="username" name="username" placeholder="ユーザー名" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="password">パスワード</label>
+<input class="form-input w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="password" name="password" placeholder="パスワード" type="password"/>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-gray-800 transition-colors duration-300" type="submit">
+                        ログイン
+                    </button>
+</form>
+</div>
+<div class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+<p>アカウントは管理者によって作成されます。</p>
+<p>アクセスできない場合は管理者に連絡してください。</p>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>豊田少年少女発明クラブ統合ポータルサイト - 管理者ダッシュボード</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#F4C753", "background-light": "#f8f7f6", "background-dark": "#221d10"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white/50 dark:bg-black/20 flex flex-col shrink-0 border-r border-black/10 dark:border-white/10">
+<div class="p-6 flex flex-col gap-2 border-b border-black/10 dark:border-white/10">
+<h1 class="text-lg font-bold text-black/90 dark:text-white/90">発明クラブ管理</h1>
+<p class="text-sm text-black/60 dark:text-white/60">管理者</p>
+</div>
+<nav class="flex-1 p-4">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span>ダッシュボード</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span>ユーザー管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span>コンテンツ管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>システム設定</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">analytics</span>
+<span>統計情報</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-black/10 dark:border-white/10">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-black/80 dark:text-white/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>ログアウト</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8">
+<h1 class="text-4xl font-bold text-black/90 dark:text-white/90">ダッシュボード</h1>
+</header>
+<div class="space-y-10">
+<section>
+<h2 class="text-2xl font-semibold text-black/80 dark:text-white/80 mb-4">概要</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10">
+<h3 class="text-base font-medium text-black/60 dark:text-white/60 mb-2">総ユーザー数</h3>
+<p class="text-3xl font-bold text-black/90 dark:text-white/90">125</p>
+</div>
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10">
+<h3 class="text-base font-medium text-black/60 dark:text-white/60 mb-2">アクティブユーザー数</h3>
+<p class="text-3xl font-bold text-black/90 dark:text-white/90">87</p>
+</div>
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10">
+<h3 class="text-base font-medium text-black/60 dark:text-white/60 mb-2">新規登録数 (今週)</h3>
+<p class="text-3xl font-bold text-black/90 dark:text-white/90">15</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-semibold text-black/80 dark:text-white/80 mb-4">クイックアクション</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col">
+<h3 class="text-lg font-semibold text-black/90 dark:text-white/90 mb-4">ユーザー管理</h3>
+<div class="flex flex-col space-y-3 flex-grow">
+<button class="w-full text-left bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors flex-grow">新規ユーザー追加</button>
+<button class="w-full text-left bg-primary/20 dark:bg-primary/30 text-primary px-4 py-2 rounded-lg font-semibold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors flex-grow">ユーザー一覧</button>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col">
+<h3 class="text-lg font-semibold text-black/90 dark:text-white/90 mb-4">コンテンツ管理</h3>
+<div class="flex flex-col space-y-3 flex-grow">
+<button class="w-full text-left bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors flex-grow">新規コンテンツ追加</button>
+<button class="w-full text-left bg-primary/20 dark:bg-primary/30 text-primary px-4 py-2 rounded-lg font-semibold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors flex-grow">コンテンツ一覧</button>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col">
+<h3 class="text-lg font-semibold text-black/90 dark:text-white/90 mb-4">システム設定</h3>
+<div class="flex flex-col space-y-3 flex-grow">
+<button class="w-full text-left bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors flex-grow">設定変更</button>
+<button class="w-full text-left bg-primary/20 dark:bg-primary/30 text-primary px-4 py-2 rounded-lg font-semibold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors flex-grow">ログ表示</button>
+</div>
+</div>
+<div class="bg-white/50 dark:bg-black/20 p-6 rounded-xl border border-black/10 dark:border-white/10 flex flex-col">
+<h3 class="text-lg font-semibold text-black/90 dark:text-white/90 mb-4">統計情報</h3>
+<div class="flex flex-col space-y-3 flex-grow">
+<button class="w-full text-left bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors flex-grow">詳細レポート</button>
+<button class="w-full text-left bg-primary/20 dark:bg-primary/30 text-primary px-4 py-2 rounded-lg font-semibold hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors flex-grow">エクスポート</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

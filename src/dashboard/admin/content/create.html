@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>豊田少年少女発明クラブ統合ポータルサイト - 新規コンテンツ作成</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#F4C753", "primary-light": "#FFFBEB", "primary-dark": "#FBBF24", "background-light": "#f8f7f6", "background-dark": "#1a1a1a", "form-background-light": "#FFFFFF", "form-background-dark": "#2C2C2C", "text-light": "#333333", "text-dark": "#E0E0E0", "border-light": "#E5E7EB", "border-dark": "#4B5563"}, fontFamily: {display: "Inter", body: ["Noto Sans JP", "sans-serif"]}, borderRadius: {DEFAULT: "0.5rem", lg: "0.75rem", xl: "1rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-body bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white/80 dark:bg-black/30 flex flex-col shrink-0 border-r border-border-light dark:border-border-dark backdrop-blur-sm">
+<div class="p-6 flex flex-col gap-2 border-b border-border-light dark:border-border-dark">
+<h1 class="text-xl font-bold text-gray-800 dark:text-white/90 font-display">発明クラブ管理</h1>
+<p class="text-sm text-gray-500 dark:text-white/60">管理者ポータル</p>
+</div>
+<nav class="flex-1 p-4">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-white/80 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span>ダッシュボード</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-white/80 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span>ユーザー管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary-light text-primary-dark dark:bg-primary/20 dark:text-primary font-semibold" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">description</span>
+<span>コンテンツ管理</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-white/80 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>システム設定</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-white/80 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">analytics</span>
+<span>統計情報</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-border-light dark:border-border-dark">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-white/80 hover:bg-primary-light dark:hover:bg-primary/20 hover:text-primary-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>ログアウト</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto">
+<header class="mb-8">
+<a class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-dark dark:hover:text-primary transition-colors mb-2" href="#">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+<span>コンテンツ管理に戻る</span>
+</a>
+<h1 class="text-3xl font-bold text-gray-800 dark:text-white/90 font-display">新規コンテンツ作成</h1>
+<p class="text-gray-600 dark:text-gray-400 mt-1">新しいお知らせ、イベント、教材などを追加します。</p>
+</header>
+<div class="bg-form-background-light dark:bg-form-background-dark p-8 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<label class="col-span-1 text-sm font-medium text-gray-700 dark:text-gray-300 pt-3">コンテンツの種類 <span class="text-red-500">*</span></label>
+<div class="col-span-2">
+<select class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-border-light dark:border-border-dark rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" required="">
+<option disabled="" selected="" value="">選択してください</option>
+<option value="news">お知らせ</option>
+<option value="event">イベント</option>
+<option value="material">教材</option>
+<option value="faq">FAQ</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<label class="col-span-1 text-sm font-medium text-gray-700 dark:text-gray-300 pt-3" for="title">タイトル <span class="text-red-500">*</span></label>
+<div class="col-span-2">
+<input class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-border-light dark:border-border-dark rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" id="title" placeholder="例：夏休み発明コンテストの開催" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<label class="col-span-1 text-sm font-medium text-gray-700 dark:text-gray-300 pt-3" for="content">本文 <span class="text-red-500">*</span></label>
+<div class="col-span-2">
+<textarea class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-border-light dark:border-border-dark rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" id="content" placeholder="コンテンツの詳細を入力してください..." required="" rows="10"></textarea>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<label class="col-span-1 text-sm font-medium text-gray-700 dark:text-gray-300 pt-3">公開設定 <span class="text-red-500">*</span></label>
+<div class="col-span-2 flex items-center space-x-6 pt-2">
+<label class="flex items-center space-x-2 cursor-pointer">
+<input checked="" class="form-radio text-primary focus:ring-primary" name="status" type="radio" value="public"/>
+<span class="text-sm">公開</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="form-radio text-primary focus:ring-primary" name="status" type="radio" value="private"/>
+<span class="text-sm">非公開</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="form-radio text-primary focus:ring-primary" name="status" type="radio" value="draft"/>
+<span class="text-sm">下書きとして保存</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<label class="col-span-1 text-sm font-medium text-gray-700 dark:text-gray-300 pt-3" for="attachment">関連ファイル</label>
+<div class="col-span-2">
+<div class="w-full flex items-center justify-center px-6 py-10 border-2 border-dashed border-border-light dark:border-border-dark rounded-lg">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500">cloud_upload</span>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">ファイルをここにドラッグ＆ドロップ</p>
+<p class="text-xs text-gray-500 dark:text-gray-500">または</p>
+<label class="cursor-pointer font-medium text-primary hover:text-primary-dark transition-colors" for="file-upload">
+<span>ファイルを選択</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+</div>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">PDF, DOCX, PNG, JPGなど (最大5MB)</p>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-8">
+<div class="flex justify-end items-center gap-4">
+<button class="px-6 py-3 rounded-lg text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" type="button">
+キャンセル
+</button>
+<button class="flex items-center gap-2 bg-primary text-gray-800 px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors shadow-sm" type="submit">
+<span class="material-symbols-outlined">save</span>
+<span>コンテンツを保存</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+</body></html>
